@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LoLHelperApp</string>
+    <string name="Preferred_Champ1">Perferred Champion One</string>
+    <string name="Preferred_Champ2">Perferred Champion Two</string>
+    <string name="Preferred_Champ3">Perferred Champion Three</string>
+    <string name="Preferred_Champ4">Perferred Champion Four</string>
+    <string name="myProfile">My Profile</string>
 </resources>
