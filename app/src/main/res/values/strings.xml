@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">LoLHelperApp</string>
-    <string name="Preferred_Champ1">Perferred Champion One</string>
-    <string name="Preferred_Champ2">Perferred Champion Two</string>
-    <string name="Preferred_Champ3">Perferred Champion Three</string>
-    <string name="Preferred_Champ4">Perferred Champion Four</string>
+    <string name="Preferred_Champ1">Preferred Champion One</string>
+    <string name="Preferred_Champ2">Preferred Champion Two</string>
+    <string name="Preferred_Champ3">Preferred Champion Three</string>
+    <string name="Preferred_Champ4">Preferred Champion Four</string>
     <string name="myProfile">My Profile</string>
     <string name="my_Preferred_champs">My Preferred Champions:</string>
+    <string name="name_placeholder">name</string>
+    <string name="role_placeholder">role</string>
+    <string name="winrate_placeholder">winrate</string>
+    <string name="ability_label">Abilities</string>
+    <string name="item_label">Items</string>
+    <string name="item_placehold">item</string>
+    <string name="ability_placehold">ability</string>
+    <string name="add_pref_test">Add Preferred Champions</string>
+    <string name="add_pref_hint">Add a Preferred Champion</string>
 </resources>
