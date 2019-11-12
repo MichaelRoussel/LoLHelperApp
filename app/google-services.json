@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "271799028533",
+    "firebase_url": "https://lolhelperapp-704d4.firebaseio.com",
+    "project_id": "lolhelperapp-704d4",
+    "storage_bucket": "lolhelperapp-704d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271799028533:android:5518c87bd8ca254a141a7c",
+        "android_client_info": {
+          "package_name": "com.example.lolhelperapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271799028533-aa8951q6mju66pv32fur1rfa7qbvkqld.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lolhelperapp",
+            "certificate_hash": "b117398114ba2d826991c64ae9a3bbc338dd39d2"
+          }
+        },
+        {
+          "client_id": "271799028533-ukgbkc7dc7ibd6v4vpsvg1jbr8ln5j6i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsPbmbDoXjI_cKy5o2JQxRaREIDkPDXpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271799028533-ukgbkc7dc7ibd6v4vpsvg1jbr8ln5j6i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
