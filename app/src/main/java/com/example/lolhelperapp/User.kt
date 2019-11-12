@@ -3,10 +3,10 @@ package com.example.lolhelperapp
 class User {
     var id: String? = null
     var userName: String? = null
-    var perfeeredChampOne: String? = null
-    var perfeeredChampTwo: String? = null
-    var perfeeredChampThree: String? = null
-    var perfeeredChampFour: String? = null
+    var preferredChampOne: String? = null
+    var preferredChampTwo: String? = null
+    var preferredChampThree: String? = null
+    var preferredChampFour: String? = null
 
     constructor() {
 
@@ -16,10 +16,10 @@ class User {
     constructor(id: String, userName: String, perfeeredChampOne: String, perfeeredChampTwo: String, perfeeredChampThree: String, perfeeredChampFour: String) {
         this.userName = userName
         this.id = id
-        this.perfeeredChampOne = perfeeredChampOne
-        this.perfeeredChampTwo = perfeeredChampTwo
-        this.perfeeredChampThree = perfeeredChampThree
-        this.perfeeredChampFour = perfeeredChampFour
+        this.preferredChampOne = perfeeredChampOne
+        this.preferredChampTwo = perfeeredChampTwo
+        this.preferredChampThree = perfeeredChampThree
+        this.preferredChampFour = perfeeredChampFour
 
     }
 

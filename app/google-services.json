@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "271799028533-6r6ml267s416fuhkjbgamglo4pjn4hol.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lolhelperapp",
+            "certificate_hash": "52cbd3641bd4ca7433a1892cca3ea76e00a36adb"
+          }
+        },
+        {
           "client_id": "271799028533-aa8951q6mju66pv32fur1rfa7qbvkqld.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
