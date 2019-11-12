@@ -40,8 +40,8 @@ class ChampionActivity : AppCompatActivity() {
         }
 
         //profile button
-        fabProfile.setOnClickListener{
-            val intent = Intent(applicationContext, ProfileActivity::class.java)
+        fabHomeChampion.setOnClickListener{
+            val intent = Intent(applicationContext, LandingActivity::class.java)
             startActivity(intent)
         }
     }

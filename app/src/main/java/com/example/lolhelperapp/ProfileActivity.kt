@@ -37,6 +37,15 @@ class ProfileActivity : AppCompatActivity() {
             textViewEmail.text = email
         }
 
+        val docRef = db.collection("Users").document(user?.uid.toString())
+        docRef.get()
+            .addOnSuccessListener { documentSnapshot ->
+                if (documentSnapshot != null) {
+                    val userObject = documentSnapshot.toObject(User::class.java)
+                    champOneText.text = userObject?.preferredChampOne
+                }
+            }
+
 
         //sign out button
         fabExitProfile.setOnClickListener{
