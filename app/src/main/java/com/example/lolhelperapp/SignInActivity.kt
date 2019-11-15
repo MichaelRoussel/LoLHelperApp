@@ -4,14 +4,19 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 
 class SignInActivity : AppCompatActivity() {
 
     val RC_SIGN_IN = 1
+    var db = FirebaseFirestore.getInstance()
+    var ref = db.document("Users/user")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,13 +39,32 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
+        var email = ""
         if (requestCode == RC_SIGN_IN) {
             val response = IdpResponse.fromResultIntent(data)
 
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
+
+                if(user == null){
+
+                }
+                else{
+                    email = user.email.toString()
+                }
+
+                val query = db.collection("Users").whereEqualTo(email, true).get().addOnCompleteListener{task -> if(task.isSuccessful){}else{val tbl = db.collection("Users")
+                    val id = tbl.document().getId()
+
+                    val newUser = User()
+                    newUser.id = id
+                    newUser.userName = email
+
+                    // save to the db
+                    tbl.document(id).set(newUser)
+                    Toast.makeText(this, "User Created!", Toast.LENGTH_LONG).show()
+                } }
 
                 // redirect to landing activity
                 val intent = Intent(applicationContext, LandingActivity::class.java)

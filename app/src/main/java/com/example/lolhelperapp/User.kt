@@ -22,5 +22,9 @@ class User {
         this.preferredChampFour = preferredChampFour
 
     }
+    constructor(id: String, userName: String) {
+        this.userName = userName
+        this.id = id
+    }
 
 }
