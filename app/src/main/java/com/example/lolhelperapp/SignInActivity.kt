@@ -10,6 +10,7 @@ import com.firebase.ui.auth.IdpResponse
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.google.firebase.analytics.FirebaseAnalytics
 
 
 class SignInActivity : AppCompatActivity() {
@@ -19,6 +20,7 @@ class SignInActivity : AppCompatActivity() {
     var ref = db.document("Users/user")
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
@@ -38,6 +40,7 @@ class SignInActivity : AppCompatActivity() {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val firebaseAnalytics = FirebaseAnalytics.getInstance(this)
         super.onActivityResult(requestCode, resultCode, data)
         //var email = ""
         if (requestCode == RC_SIGN_IN) {
@@ -46,7 +49,8 @@ class SignInActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
-
+                firebaseAnalytics.setUserProperty("champTwo", "")
+                firebaseAnalytics.setUserProperty("champOne", "")
                 // redirect to landing activity
                 val intent = Intent(applicationContext, LandingActivity::class.java)
                 startActivity(intent)

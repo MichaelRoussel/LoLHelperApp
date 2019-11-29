@@ -43,6 +43,9 @@ class ProfileActivity : AppCompatActivity() {
                 if (documentSnapshot != null) {
                     val userObject = documentSnapshot.toObject(User::class.java)
                     champOneText.text = userObject?.preferredChampOne
+                    textView5.text = userObject?.preferredChampTwo
+                    textView7.text = userObject?.preferredChampThree
+                    textView9.text = userObject?.preferredChampFour
                 }
             }
 
@@ -62,6 +65,32 @@ class ProfileActivity : AppCompatActivity() {
         fabHome.setOnClickListener{
             val intent = Intent(applicationContext, LandingActivity::class.java)
             startActivity(intent)
+        }
+
+        clear.setOnClickListener {
+            val tbl = db.collection("Users")
+            val user = FirebaseAuth.getInstance().currentUser
+            val docRef = db.collection("Users").document(user?.uid.toString())
+            docRef.get()
+                .addOnSuccessListener { documentSnapshot ->
+                    if (documentSnapshot != null) {
+                        val userObject = documentSnapshot.toObject(User::class.java)
+                        val id = user?.uid.toString()
+                        val email = user?.email.toString()
+                        val perferedOne = ""
+                        val perferedTwo = ""
+                        val perferedThree = ""
+                        val perferedFour = ""
+                        val userObjectTwo = User(id, email, perferedOne, perferedTwo, perferedThree, perferedFour)
+                        tbl.document(id).set(userObjectTwo)
+                        Toast.makeText(this, "Champions Cleared", Toast.LENGTH_LONG).show()
+                        champOneText.text = ""
+                        textView5.text = ""
+                        textView7.text = ""
+                        textView9.text = ""
+
+                    }
+                }
         }
 
     }

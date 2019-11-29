@@ -16,4 +16,6 @@
     <string name="add_pref_test">Add Preferred Champions</string>
     <string name="add_pref_hint">Add a Preferred Champion</string>
     <string name="save_text">Save</string>
+    <string name="clear_champs">Clear Champions</string>
+    <string name="change_one">Change Champ 1</string>
 </resources>

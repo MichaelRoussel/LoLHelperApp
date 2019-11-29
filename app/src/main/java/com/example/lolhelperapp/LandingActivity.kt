@@ -66,11 +66,49 @@ class LandingActivity : AppCompatActivity() {
                 //store variable in user object
                 val tbl = db.collection("Users")
                 val user = FirebaseAuth.getInstance().currentUser
-                val id = user?.uid.toString()
-                val email = user?.email.toString()
-                val userObject = User(id, email, champion, "", "", "")
-                tbl.document(id).set(userObject)
-                Toast.makeText(this, "Champion added", Toast.LENGTH_LONG).show()
+                val docRef = db.collection("Users").document(user?.uid.toString())
+                docRef.get()
+                    .addOnSuccessListener { documentSnapshot ->
+                        if (documentSnapshot != null) {
+                            val userObject = documentSnapshot.toObject(User::class.java)
+                            val id = user?.uid.toString()
+                            val email = user?.email.toString()
+                            val perferedOne = userObject?.preferredChampOne
+                            val perferedTwo = userObject?.preferredChampTwo
+                            val perferedThree = userObject?.preferredChampThree
+                            val perferedFour = userObject?.preferredChampFour
+                            if(perferedOne == null || perferedOne.isEmpty()){
+                                val userObjectTwo = User(id, email, champion, perferedTwo, perferedThree, perferedFour)
+                                tbl.document(id).set(userObjectTwo)
+                                Toast.makeText(this, "Champion added", Toast.LENGTH_LONG).show()
+                            }
+                            else{
+                                if(perferedTwo == null || perferedTwo.isEmpty()){
+                                    val userObjectTwo = User(id, email, perferedOne, champion, perferedThree, perferedFour)
+                                    tbl.document(id).set(userObjectTwo)
+                                    Toast.makeText(this, "Champion added", Toast.LENGTH_LONG).show()
+                                }
+                                else{
+                                    if(perferedThree == null || perferedThree.isEmpty()){
+                                        val userObjectTwo = User(id, email, perferedOne, perferedTwo, champion, perferedFour)
+                                        tbl.document(id).set(userObjectTwo)
+                                        Toast.makeText(this, "Champion added", Toast.LENGTH_LONG).show()
+                                    }
+                                    else{
+                                        if(perferedFour == null || perferedFour.isEmpty()){
+                                            val userObjectTwo = User(id, email, perferedOne, perferedTwo, perferedThree, champion)
+                                            tbl.document(id).set(userObjectTwo)
+                                            Toast.makeText(this, "Champion added", Toast.LENGTH_LONG).show()
+                                        }
+                                        else{
+                                            Toast.makeText(this, "Please make room on the profile page!", Toast.LENGTH_LONG).show()
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
             }
         }
 
