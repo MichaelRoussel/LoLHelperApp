@@ -19,6 +19,7 @@ class SignInActivity : AppCompatActivity() {
     var ref = db.document("Users/user")
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_in)
 
@@ -46,7 +47,6 @@ class SignInActivity : AppCompatActivity() {
             if (resultCode == Activity.RESULT_OK) {
                 // Successfully signed in
                 val user = FirebaseAuth.getInstance().currentUser
-
                 // redirect to landing activity
                 val intent = Intent(applicationContext, LandingActivity::class.java)
                 startActivity(intent)

@@ -22,44 +22,39 @@
         android:id="@+id/champButtonOne"
         android:layout_width="205dp"
         android:layout_height="211dp"
-        android:src="@mipmap/ic_blitz"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintBottom_toTopOf="@+id/champButtonThree"
+        app:layout_constraintEnd_toStartOf="@+id/champButtonTwo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAdd"
-        tools:src="@mipmap/ic_blitz"
-        tools:srcCompat="@mipmap/ic_blitz" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextAdd" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/champButtonTwo"
         android:layout_width="205dp"
         android:layout_height="211dp"
-        android:layout_marginStart="3dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintBottom_toTopOf="@+id/champButtonFour"
         app:layout_constraintStart_toEndOf="@+id/champButtonOne"
         app:layout_constraintTop_toBottomOf="@+id/editTextAdd"
-        tools:srcCompat="@tools:sample/avatars" />
-
+        />
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/champButtonThree"
         android:layout_width="205dp"
         android:layout_height="211dp"
         app:layout_constraintTop_toBottomOf="@id/champButtonOne"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintEnd_toStartOf="@+id/champButtonFour"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/champButtonFour"
         android:layout_width="205dp"
         android:layout_height="211dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintStart_toEndOf="@+id/champButtonThree"
+        app:layout_constraintTop_toBottomOf="@+id/champButtonTwo"
+        />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabProfile"

@@ -13,7 +13,7 @@ class User {
     }
 
 
-    constructor(id: String, email: String, preferredChampOne: String, preferredChampTwo: String, preferredChampThree: String, preferredChampFour: String) {
+    constructor(id: String, email: String, preferredChampOne: String, preferredChampTwo: String?, preferredChampThree: String?, preferredChampFour: String?) {
         this.email = email
         this.id = id
         this.preferredChampOne = preferredChampOne
