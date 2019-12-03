@@ -10,7 +10,7 @@
         android:id="@+id/championImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -65,7 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="@string/ability_label"
+        android:text="@string/runes_label"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/itemTitleText"
@@ -92,29 +92,29 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityOneImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeOneImage"
         app:layout_constraintStart_toEndOf="@+id/itemOneImage"
         app:layout_constraintTop_toBottomOf="@+id/itemTitleText" />
 
     <ImageView
-        android:id="@+id/abilityOneImage"
+        android:id="@+id/runeOneImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityOneText"
+        app:layout_constraintEnd_toStartOf="@+id/runeOneText"
         app:layout_constraintTop_toBottomOf="@+id/abilityTitleText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/abilityOneText"
+        android:id="@+id/runeOneText"
         android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
         android:gravity="center"
         android:lines="@integer/num_lines"
-        android:text="@string/ability_placehold"
+        android:text="@string/rune_placeholder"
         android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +127,7 @@
         android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemOneImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemOneText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -141,33 +141,33 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityTwoImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeTwoImage"
         app:layout_constraintStart_toEndOf="@+id/itemTwoImage"
         app:layout_constraintTop_toBottomOf="@+id/itemOneText" />
 
     <ImageView
-        android:id="@+id/abilityTwoImage"
+        android:id="@+id/runeTwoImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityTwoText"
-        app:layout_constraintTop_toBottomOf="@+id/abilityOneImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeTwoText"
+        app:layout_constraintTop_toBottomOf="@+id/runeOneText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/abilityTwoText"
+        android:id="@+id/runeTwoText"
         android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
         android:gravity="center"
         android:lines="@integer/num_lines"
-        android:text="@string/ability_placehold"
+        android:text="@string/rune_placeholder"
         android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abilityOneText" />
+        app:layout_constraintTop_toBottomOf="@+id/runeOneText" />
 
     <ImageView
         android:id="@+id/itemThreeImage"
@@ -176,7 +176,7 @@
         android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemTwoImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemTwoText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -190,33 +190,33 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityThreeImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeThreeImage"
         app:layout_constraintStart_toEndOf="@+id/itemThreeImage"
         app:layout_constraintTop_toBottomOf="@+id/itemTwoText" />
 
     <ImageView
-        android:id="@+id/abilityThreeImage"
+        android:id="@+id/runeThreeImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityThreeText"
-        app:layout_constraintTop_toBottomOf="@+id/abilityTwoImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeThreeText"
+        app:layout_constraintTop_toBottomOf="@+id/runeTwoText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/abilityThreeText"
+        android:id="@+id/runeThreeText"
         android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
         android:gravity="center"
         android:lines="@integer/num_lines"
-        android:text="@string/ability_placehold"
+        android:text="@string/rune_placeholder"
         android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abilityTwoText" />
+        app:layout_constraintTop_toBottomOf="@+id/runeTwoText" />
 
     <ImageView
         android:id="@+id/itemFourImage"
@@ -225,7 +225,7 @@
         android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemThreeImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemThreeText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -239,33 +239,33 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityFourImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourImage"
         app:layout_constraintStart_toEndOf="@+id/itemFourImage"
         app:layout_constraintTop_toBottomOf="@+id/itemThreeText" />
 
     <ImageView
-        android:id="@+id/abilityFourImage"
+        android:id="@+id/runeFourImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityFourText"
-        app:layout_constraintTop_toBottomOf="@+id/abilityThreeImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourText"
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
-        android:id="@+id/abilityFourText"
+        android:id="@+id/runeFourText"
         android:layout_width="100dp"
         android:layout_height="32dp"
         android:layout_marginTop="20sp"
         android:layout_marginEnd="30sp"
         android:gravity="center"
         android:lines="@integer/num_lines"
-        android:text="@string/ability_placehold"
+        android:text="@string/rune_placeholder"
         android:textAlignment="center"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abilityThreeText" />
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText" />
 
     <ImageView
         android:id="@+id/itemFiveImage"
@@ -274,7 +274,7 @@
         android:layout_marginStart="30sp"
         android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemFourImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemFourText"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <TextView
@@ -288,9 +288,33 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityFourImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourImage"
         app:layout_constraintStart_toEndOf="@+id/itemFiveImage"
         app:layout_constraintTop_toBottomOf="@+id/itemFourText" />
+
+    <ImageView
+        android:id="@+id/runeFiveImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourText"
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/runeFiveText"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:lines="@integer/num_lines"
+        android:text="@string/rune_placeholder"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText" />
 
     <ImageView
         android:id="@+id/itemSixImage"
@@ -298,7 +322,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemFiveImage"
+        app:layout_constraintTop_toBottomOf="@+id/itemFiveText"
         app:srcCompat="@android:drawable/btn_star_big_on"
         android:layout_marginStart="30sp" />
 
@@ -313,9 +337,33 @@
         android:text="@string/item_placehold"
         android:textAlignment="center"
         android:textSize="12sp"
-        app:layout_constraintEnd_toStartOf="@+id/abilityFourImage"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourImage"
         app:layout_constraintStart_toEndOf="@+id/itemSixImage"
         app:layout_constraintTop_toBottomOf="@+id/itemFiveText" />
+
+    <ImageView
+        android:id="@+id/runeSixImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="28dp"
+        app:layout_constraintEnd_toStartOf="@+id/runeFourText"
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText"
+        app:srcCompat="@android:drawable/btn_star_big_on" />
+
+    <TextView
+        android:id="@+id/runeSixText"
+        android:layout_width="100dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:lines="@integer/num_lines"
+        android:text="@string/rune_placeholder"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/runeThreeText" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabHomeChampion"

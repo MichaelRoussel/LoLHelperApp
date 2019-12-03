@@ -16,4 +16,6 @@
     <string name="add_pref_test">Add Preferred Champions</string>
     <string name="add_pref_hint">Add a Preferred Champion</string>
     <string name="save_text">Save</string>
+    <string name="runes_label">Runes</string>
+    <string name="rune_placeholder">Rune</string>
 </resources>

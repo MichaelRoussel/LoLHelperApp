@@ -51,6 +51,7 @@ class LandingActivity : AppCompatActivity() {
         //button to champion page
         champButtonOne.setOnClickListener{
             val intent = Intent(applicationContext, ChampionActivity::class.java)
+            intent.putExtra("champName", "Blitzcrank")
             startActivity(intent)
         }
 
