@@ -15,3 +15,5 @@ Maokai
 Xin Zhao
 
 Riven
+
+For assignment three, We finished the champion page and accessed the database to populate the user info and champion info. we also finished the landing page and incorporated the buttons to select the appropriate preferred champion
