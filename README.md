@@ -5,8 +5,13 @@ Created by Michael Roussel and Drake Esdon
 2019
 
 Current Champions supported:
+
 Blitzcrank
+
 Nocturne
+
 Maokai
+
 Xin Zhao
+
 Riven
